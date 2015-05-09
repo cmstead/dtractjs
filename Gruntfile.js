@@ -5,6 +5,7 @@ module.exports = function(grunt){
             files: ["src/**"],
             options: {}
         },
+
         jasmine_nodejs: {
             core: {
                 // target specific options
@@ -28,6 +29,7 @@ module.exports = function(grunt){
                 ]
             }
         },
+
         uglify: {
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n',
