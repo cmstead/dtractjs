@@ -1,0 +1,6 @@
+{
+  "dist": {
+    "src": ["src/dtract.js"],
+    "dest": "dist/dtract.js"
+  }
+}

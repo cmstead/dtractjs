@@ -1,4 +1,4 @@
-var dtract = require('../src/dtract.js');
+var dtract = require('../dist/dtract.js');
 
 describe('dtract', function(){
 
