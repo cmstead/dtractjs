@@ -1,4 +1,4 @@
-var pactor = (function(){
+var dtract = (function(){
 
     function elementToString(dataElement){
         var dataString = typeof dataElement;
@@ -62,5 +62,5 @@ var pactor = (function(){
 
 
 if(module !== undefined && module.exports){
-    module.exports = pactor;
+    module.exports = dtract;
 }

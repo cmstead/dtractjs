@@ -1,6 +1,6 @@
-var pactor = require('../src/pactor.js');
+var dtract = require('../src/dtract.js');
 
-describe('pactor', function(){
+describe('dtract', function(){
 
     describe('applyContract', function(){
 
@@ -47,18 +47,18 @@ describe('pactor', function(){
         });
 
         it('should remove properties not defined in the contract', function(){
-            var result = pactor.applyContract(testContract, testObject);
+            var result = dtract.applyContract(testContract, testObject);
             expect(result.testGarbage).toBe(undefined);
         });
 
         it('should throw an error if object does not match the contract', function(){
             testObject.testString = 100;
-            expect(pactor.applyContract.bind(null, testContract, testObject)).toThrow();
+            expect(dtract.applyContract.bind(null, testContract, testObject)).toThrow();
         });
 
         it('should not throw an error if object is null and data is nullable', function(){
             testObject.testObject = null;
-            expect(pactor.applyContract.bind(null, testContract, testObject)).not.toThrow();
+            expect(dtract.applyContract.bind(null, testContract, testObject)).not.toThrow();
         });
 
     });

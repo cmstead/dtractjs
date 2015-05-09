@@ -1,7 +1,7 @@
 {
-  "name": "pactor",
+  "name": "DTractjs",
   "description": "A contract and data mapping library for managing and handling data systems interactions",
-  "repository": "https://github.com/cmstead/pactor",
+  "repository": "https://github.com/cmstead/dtract",
   "version": "1.0.0",
   "devDependencies": {
     "grunt": "^0.4.5",
