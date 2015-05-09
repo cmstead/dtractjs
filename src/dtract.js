@@ -2,7 +2,6 @@ var dtract = (function(){
 
     function elementToString(dataElement){
         var dataString = typeof dataElement;
-
         return dataString === 'object' ? Object.prototype.toString.call(dataElement) : dataString;
     }
 
