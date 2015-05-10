@@ -1,4 +1,7 @@
-var dtract = (function(){
+var dtract = {};
+
+(function(dtract){
+    'use strict';
 
     function elementToString(dataElement){
         var dataString = typeof dataElement;
@@ -30,6 +33,19 @@ var dtract = (function(){
         }
     }
 
+
+    dtract.elementToString = elementToString;
+    dtract.getType = getType;
+    dtract.checkProperty = checkProperty;
+
+})(dtract);
+
+(function(dtract){
+    'use strict';
+
+    var checkProperty = dtract.checkProperty,
+        getType = dtract.getType;
+
     function filterData(contract, dataObject){
         var finalObject = {},
             dataKeys = Object.keys(dataObject);
@@ -54,11 +70,10 @@ var dtract = (function(){
         return finalData;
     }
 
-    return {
-        applyContract: applyContract
-    };
-})();
+    dtract.applyContract = applyContract;
+    dtract.filterData = filterData;
 
+})(dtract);
 
 if(module !== undefined && module.exports){
     module.exports = dtract;

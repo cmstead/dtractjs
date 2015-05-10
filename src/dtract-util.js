@@ -1,4 +1,5 @@
-var dtract = (function(){
+(function(dtract){
+    'use strict';
 
     function elementToString(dataElement){
         var dataString = typeof dataElement;
@@ -30,36 +31,9 @@ var dtract = (function(){
         }
     }
 
-    function filterData(contract, dataObject){
-        var finalObject = {},
-            dataKeys = Object.keys(dataObject);
 
-        dataKeys.forEach(function(key){
-            if(contract[key] !== undefined){
-                finalObject[key] = dataObject[key];
-            }
-        });
+    dtract.elementToString = elementToString;
+    dtract.getType = getType;
+    dtract.checkProperty = checkProperty;
 
-        return finalObject;
-    }
-
-    function applyContract(contract, dataObject){
-        var finalData = filterData(contract, dataObject),
-            contractKeys = Object.keys(contract);
-
-        contractKeys.forEach(function(key){
-            checkProperty(contract, dataObject, key);
-        });
-
-        return finalData;
-    }
-
-    return {
-        applyContract: applyContract
-    };
-})();
-
-
-if(module !== undefined && module.exports){
-    module.exports = dtract;
-}
+})(dtract);
