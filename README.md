@@ -7,5 +7,5 @@ Any data that is not explicitly detailed in the contract object will be discarde
 
 Upcoming enhancements:
 
--[ ] remap will handle nullable fields which are potentially missing from data object
--[ ] remap will throw an error if the data object cannot fulfill the map requirements
+- [ ] remap will handle nullable fields which are potentially missing from data object
+- [ ] remap will throw an error if the data object cannot fulfill the map requirements
