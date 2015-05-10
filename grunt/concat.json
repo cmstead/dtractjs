@@ -4,6 +4,7 @@
       "src/dtract-def.js",
       "src/dtract-util.js",
       "src/dtract-contract.js",
+      "src/dtract-remap.js",
       "src/dtract-export.js"
     ],
     "dest": "dist/dtract.js"

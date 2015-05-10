@@ -1,11 +1,11 @@
 {
   "options": {
     "banner": "/*! <%= pkg.name %> <%= grunt.template.today('dd-mm-yyyy') %> */\n",
-    "sourceMap": false
+    "sourceMap": true
   },
   "dist": {
     "files": {
-      "dist/<%= pkg.name %>.min.js": ["./scripts/src/**/*.js"]
+      "dist/<%= pkg.name %>.min.js": ["./dist/dtract.js"]
     }
   }
 }
